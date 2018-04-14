@@ -10,8 +10,7 @@ class HomePageController extends Controller
     /**
     * Display all products
     */
-    public function index()
-    {
+    public function index(){
         $products = Product::select('id','title','price')
                             ->latest()
                             ->paginate(9);
@@ -21,10 +20,18 @@ class HomePageController extends Controller
     /**
     * Display the products by category
     */
-    public function adsByCategory($id)
-    {
+    public function adsByCategory($id){
         $products = Product::where('category_id',$id)->get();
         return view('front.byCategory',compact('products'));
     }
+
+    /**
+    * Display product details page 
+    */
+    public function adsDetails($id){
+        $product = Product::find($id);
+        return view('front.details',compact('product'));
+    }
+
 
 }

@@ -15,6 +15,8 @@ Route::get('/', 'HomePageController@index');
 
 Route::get('/category/{id}','HomePageController@adsByCategory');
 
+Route::get('/showDetails/{id}','HomePageController@adsDetails');
+
 //Admin route
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

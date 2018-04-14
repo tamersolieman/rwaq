@@ -12,7 +12,7 @@
         <a href="#"><img class="card-img-top" height="150px" src="{{asset('storage/'.$img_title)}}"  alt="image" ></a>
         <div class="card-body">
             <h5 class="card-title">
-                <a href="">{{$product->title}}</a>
+                <a href="/showDetails/{{$product->id}}">{{$product->title}}</a>
             </h5>
             <h6>{{$product->price}}</h6>
         </div>

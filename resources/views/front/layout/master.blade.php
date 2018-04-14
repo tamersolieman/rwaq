@@ -39,10 +39,10 @@
 		 <div class="row">
 			  <div class="col-lg-3 text-right">			  
 				  <h1 class="my-4"></h1>
-				  <div class="list-group ">					
-						<a href="" class="list-group-item">الكترونيات</a>
-						<a href="" class="list-group-item">أثاث</a>
-						<a href="" class="list-group-item">مركبات</a>
+				  <div class="list-group ">			
+						@foreach($items as $item)		
+							<a href="" class="list-group-item">{{$item->name}}</a>
+						@endforeach
 				  </div>					  
 			  </div>
 			  <!-- /.col-lg-3 -->

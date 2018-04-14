@@ -7,6 +7,9 @@ use App\Product;
 
 class HomePageController extends Controller
 {
+    /**
+    * Display all products
+    */
     public function index()
     {
         $products = Product::select('id','title','price')
@@ -14,4 +17,14 @@ class HomePageController extends Controller
                             ->paginate(9);
         return view('front.index',compact('products'));
     }
+
+    /**
+    * Display the products by category
+    */
+    public function adsByCategory($id)
+    {
+        $products = Product::where('category_id',$id)->get();
+        return view('front.byCategory',compact('products'));
+    }
+
 }

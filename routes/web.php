@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomePageController@index');
 
+Route::get('/category/{id}','HomePageController@adsByCategory');
+
 //Admin route
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

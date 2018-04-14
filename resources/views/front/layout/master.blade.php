@@ -10,10 +10,10 @@
 		  <title>موقع إعلانات مبوبة</title>
 
 		  <!-- Bootstrap core CSS -->
-		  <link href="css/bootstrap.min.css" rel="stylesheet">
+		  <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
 		  <!-- Custom styles for this template -->
-		  <link href="css/homepage.css" rel="stylesheet">		  
+		  <link href="{{asset('css/homepage.css')}}" rel="stylesheet">		  
 	</head>
 
 	<body >
@@ -41,7 +41,7 @@
 				  <h1 class="my-4"></h1>
 				  <div class="list-group ">			
 						@foreach($items as $item)		
-							<a href="" class="list-group-item">{{$item->name}}</a>
+							<a href="/category/{{$item->id}}" class="list-group-item">{{$item->name}}</a>
 						@endforeach
 				  </div>					  
 			  </div>
@@ -67,8 +67,8 @@
 	  </footer>
 
 	 <!-- Bootstrap core JavaScript -->
-	 <script src="jquery/jquery.min.js"></script>
-	 <script src="js/bootstrap.bundle.min.js"></script>
+	 <script src="{{asset('jquery/jquery.min.js')}}"></script>
+	 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 
 	</body>
 
